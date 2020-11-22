@@ -44,7 +44,7 @@ function showScreensaver() {
   imgHeight = document.querySelector("img").height;
   imgWidth = document.querySelector("img").width;
   // There is interval of screen chenge
-  setTimeout(null, 2000);
+  setTimeout(null, 5000);
 }
 
 function stopScreensaver() {
@@ -60,7 +60,7 @@ document.onmousemove = (e) => {
     stopScreensaver();
   }
   // there is time to start screensaver
-  mouseTimeout = setInterval(showScreensaver, 2000);
+  mouseTimeout = setInterval(showScreensaver, 10000);
 };
 
 
