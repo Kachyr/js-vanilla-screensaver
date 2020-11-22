@@ -16,13 +16,19 @@ img.classList.add("imageblock");
 document.getElementById("screensaver").append(img);
 
 let imgHeight = document.querySelector("img").height;
-let imgWidth = document.querySelector("img").width
+let imgWidth = document.querySelector("img").width;
 
 function setPosition() {
   //SETTING RANDOM X AND Y
-  
-  let posHeigt = (Math.random() * (document.getElementById("screensaver").offsetHeight - imgHeight )).toFixed();
-  let posWidth = (Math.random() * (document.getElementById("screensaver").offsetWidth - imgWidth )).toFixed();
+
+  let posHeigt = (
+    Math.random() *
+    (document.getElementById("screensaver").offsetHeight - imgHeight)
+  ).toFixed();
+  let posWidth = (
+    Math.random() *
+    (document.getElementById("screensaver").offsetWidth - imgWidth)
+  ).toFixed();
   img.style.top = posHeigt + "px";
   img.style.left = posWidth + "px";
 }
@@ -34,10 +40,11 @@ function showScreensaver() {
   img.classList.remove("hide");
   screensaverActive = true;
   document.getElementById("screensaver").append(img);
-  // There is interval of screen chenge
-  setTimeout(null,2000)
+
   imgHeight = document.querySelector("img").height;
-  imgWidth = document.querySelector("img").width
+  imgWidth = document.querySelector("img").width;
+  // There is interval of screen chenge
+  setTimeout(null, 2000);
 }
 
 function stopScreensaver() {
@@ -51,9 +58,8 @@ document.onmousemove = (e) => {
   clearTimeout(mouseTimeout);
   if (screensaverActive) {
     stopScreensaver();
-    
   }
-// there is time to start screensaver
+  // there is time to start screensaver
   mouseTimeout = setInterval(showScreensaver, 2000);
 };
 

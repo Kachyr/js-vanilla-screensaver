@@ -2,7 +2,7 @@
 
 
 .show {
-  transition: opacity 400ms;
+  transition: opacity 1000ms;
   
 }
 .hide {
